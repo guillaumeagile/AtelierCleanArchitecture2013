@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.CafeAlmaParis", "Cashier.UI.console\App.CafeAlmaParis.csproj", "{BE92B4DB-9C4A-43E9-9F06-5F6EDBEAD7CB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.CafeAlmaParis", "App.CafeAlmaParis\App.CafeAlmaParis.csproj", "{BE92B4DB-9C4A-43E9-9F06-5F6EDBEAD7CB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cashier.Business.AlmaCafe", "Cashier.Business.CafeAlma\Cashier.Business.AlmaCafe.csproj", "{4E5249FA-766E-405C-AFE2-A979E34A56DC}"
 EndProject
