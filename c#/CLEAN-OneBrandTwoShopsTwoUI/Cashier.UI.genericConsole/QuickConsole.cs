@@ -5,7 +5,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 
 using Cashier.Model;
-using Cashier.Business.CafeAlma;
 using Cashier.UseCases;
 
 namespace Cashier.UI.GenericConsole

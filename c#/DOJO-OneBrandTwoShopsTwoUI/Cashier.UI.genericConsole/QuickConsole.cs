@@ -5,41 +5,39 @@ using System.Text;
 using System.Text.RegularExpressions;
 
 using Cashier.Model;
-
+using Cashier.Business.CafeAlma;
 using Cashier.UseCases;
 
 namespace Cashier.UI.GenericConsole
 {
-    public class BasicConsole : IAmAUserInterfaceForCalculateur
+    public class QuickConsole : IAmAUserInterfaceForCalculateur
     {
         string ShopName;
-        public BasicConsole(string shopName)
+        public QuickConsole(string shopName)
         {
             ShopName = shopName;
         }
 
-        ICanCalculate Calculateur;
-
-        public void GiveAWayToCalculate(ICanCalculate calculator)
-        {
-            this.Calculateur = calculator;
-        }
+        //no dynamics allowed
+        dynamic Calculateur;
+        //how to know the calculator then ?
 
         public void Run()
         {
-           
-            Console.WriteLine("{0} cashier machine ready (type = to stop)", ShopName);
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("{0} running", ShopName);
             string line = string.Empty;
             do
             {
                 line = Console.ReadLine();
-                if (line == "=")
+                if (line == "")
                     break;
                 Console.WriteLine(ProcessLine(line));
 
-            } while (line != "=");
+            } while (line != "");
 
-            Console.WriteLine("total amount : {0}", Calculateur.CalculateTotal());
+            Console.WriteLine("{0} EUR", Calculateur.CalculateTotal());
             Console.ReadLine();
         }
 
@@ -51,22 +49,23 @@ namespace Cashier.UI.GenericConsole
         /// <returns></returns>
         public string ProcessLine(string line)
         {
+            var typing = new CashierTyping();
             var listOfMatches = Regex.Matches(line, @"(\d+) ([a-zA-Z]+)");
             if (listOfMatches.Count == 0)
-                return ("syntax err");
+            {
+                typing.Number = 1;
+                typing.Reference = line;
+            }
             else
             {
-                var typing = new CashierTyping
-                {
-                    Number = int.Parse(listOfMatches[0].Groups[1].Value),
-                    Reference = listOfMatches[0].Groups[2].Value
-                };
-                Calculateur.ProcessEntry(typing);
-
+                typing.Number = int.Parse(listOfMatches[0].Groups[1].Value);
+                typing.Reference = listOfMatches[0].Groups[2].Value;
             }
-            return "next article (or = to finish)";
+            
+            Calculateur.ProcessEntry(typing);
+            return "";
         }
 
-        
+
     }
 }

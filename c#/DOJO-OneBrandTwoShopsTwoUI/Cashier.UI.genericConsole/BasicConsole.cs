@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 
 using Cashier.Model;
-
+using Cashier.Business.CafeAlma;
 using Cashier.UseCases;
 
 namespace Cashier.UI.GenericConsole
@@ -18,12 +18,10 @@ namespace Cashier.UI.GenericConsole
             ShopName = shopName;
         }
 
-        ICanCalculate Calculateur;
-
-        public void GiveAWayToCalculate(ICanCalculate calculator)
-        {
-            this.Calculateur = calculator;
-        }
+        //no dynamics allowed
+        dynamic Calculateur;
+        //how to know the calculator then ?
+       
 
         public void Run()
         {

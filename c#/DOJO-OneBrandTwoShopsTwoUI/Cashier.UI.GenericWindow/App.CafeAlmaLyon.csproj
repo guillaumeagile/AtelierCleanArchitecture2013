@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{BE92B4DB-9C4A-43E9-9F06-5F6EDBEAD7CB}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{DB47C4BF-9225-4A3A-B669-F9C34C7D2060}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Cashier.UI.console</RootNamespace>
-    <AssemblyName>Cashier.UI.console</AssemblyName>
+    <RootNamespace>Cashier.UI.GenericWindow</RootNamespace>
+    <AssemblyName>Cashier.UI.GenericWindow</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -23,7 +23,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -41,29 +40,41 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Cashier.Boundaries\Cashier.Boundaries.csproj">
-      <Project>{6AD748B4-7819-400C-919F-1F56A4B74E59}</Project>
-      <Name>Cashier.Boundaries</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Cashier.Business.CafeAlma\Cashier.Business.AlmaCafe.csproj">
-      <Project>{4E5249FA-766E-405C-AFE2-A979E34A56DC}</Project>
-      <Name>Cashier.Business.AlmaCafe</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Cashier.Data\Cashier.Data.csproj">
-      <Project>{D0540026-6CD6-48B4-A3D1-6DDE58304346}</Project>
-      <Name>Cashier.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Cashier.UI.genericConsole\Cashier.UI.genericConsole.csproj">
-      <Project>{F17840CF-CE2B-45A5-9014-2933C27E7B52}</Project>
-      <Name>Cashier.UI.genericConsole</Name>
-    </ProjectReference>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

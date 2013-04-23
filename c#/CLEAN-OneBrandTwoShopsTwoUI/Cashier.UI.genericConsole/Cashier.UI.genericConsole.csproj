@@ -45,10 +45,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Cashier.Business.CafeAlma\Cashier.Business.CafeAlma.csproj">
-      <Project>{4E5249FA-766E-405C-AFE2-A979E34A56DC}</Project>
-      <Name>Cashier.Business.CafeAlma</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Cashier.Data\Cashier.Model.csproj">
       <Project>{D0540026-6CD6-48B4-A3D1-6DDE58304346}</Project>
       <Name>Cashier.Model</Name>
