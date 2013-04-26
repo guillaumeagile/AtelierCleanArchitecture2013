@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Cashier.UI.GenericConsole;
+using Cashier.UI.GenericConsoleWithBusiness;
 using Cashier.Business;
 namespace App.CafeAlmaToulouse
 {
@@ -12,7 +12,7 @@ namespace App.CafeAlmaToulouse
         {           
             var calc = new Cashier.Business.CafeAlma.Calculateur("café Alma Toulouse");
 
-            var ui = new BasicConsole("café Alma Toulouse", calc);
+            var ui = new BasicConsole("café Alma Toulouse");
             ui.Run();
         }
     }

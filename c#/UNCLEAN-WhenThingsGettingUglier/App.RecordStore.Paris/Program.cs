@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Cashier.UI.GenericConsole;
+using Cashier.UI.GenericConsoleWithBusiness;
 
 namespace App.RecordStore.Paris
 {
@@ -12,7 +12,7 @@ namespace App.RecordStore.Paris
         {
             var calc = new Cashier.Business.RecordStore.Calculateur("record store Paris");
             
-            var ui = new BasicConsole("record store Paris", calc);
+            var ui = new BasicConsole("record store Paris");
             ui.Run();
             
         }

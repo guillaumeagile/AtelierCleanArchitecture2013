@@ -2,17 +2,17 @@
 
 using Cashier.Business.Common;
 
-namespace Cashier.UI.GenericConsole
+namespace Cashier.UI.GenericConsoleWithBusiness
 {
     public class BasicConsole
     {
         string ShopName;
         Calculateur calculateur;
 
-        public BasicConsole(string shopName, Calculateur calc)
+        public BasicConsole(string shopName)
         {
             ShopName = shopName;
-            calculateur = calc;
+            
         }
 
         public void Run()

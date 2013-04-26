@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cashier.Persistence.Fake", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cashier.Persistence.Fake.Tests", "Cashier.Persistence.Fake.Tests\Cashier.Persistence.Fake.Tests.csproj", "{1F434668-AFBE-4DD8-8676-D8A7FEEFE024}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cashier.Model.Implementation", "Cashier.Entities\Cashier.Model.Implementation.csproj", "{58EB8608-7D9A-4985-81A6-350E58D20D03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -167,6 +169,16 @@ Global
 		{1F434668-AFBE-4DD8-8676-D8A7FEEFE024}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{1F434668-AFBE-4DD8-8676-D8A7FEEFE024}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{1F434668-AFBE-4DD8-8676-D8A7FEEFE024}.Release|x86.ActiveCfg = Release|Any CPU
+		{58EB8608-7D9A-4985-81A6-350E58D20D03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58EB8608-7D9A-4985-81A6-350E58D20D03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58EB8608-7D9A-4985-81A6-350E58D20D03}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{58EB8608-7D9A-4985-81A6-350E58D20D03}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{58EB8608-7D9A-4985-81A6-350E58D20D03}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{58EB8608-7D9A-4985-81A6-350E58D20D03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58EB8608-7D9A-4985-81A6-350E58D20D03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58EB8608-7D9A-4985-81A6-350E58D20D03}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{58EB8608-7D9A-4985-81A6-350E58D20D03}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{58EB8608-7D9A-4985-81A6-350E58D20D03}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

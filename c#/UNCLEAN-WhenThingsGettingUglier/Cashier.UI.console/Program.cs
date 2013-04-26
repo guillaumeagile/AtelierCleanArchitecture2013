@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Cashier.UI.GenericConsole;
+using Cashier.UI.GenericConsoleWithBusiness;
 using Cashier.Business;
 
 namespace App.CafeAlmaParis
@@ -10,7 +10,7 @@ namespace App.CafeAlmaParis
         {           
             var calc = new Cashier.Business.CafeAlma.Calculateur("café Alma Paris");
 
-            var ui = new BasicConsole("café Alma Paris", calc);
+            var ui = new BasicConsole("café Alma Paris");
             ui.Run();
         }
     }

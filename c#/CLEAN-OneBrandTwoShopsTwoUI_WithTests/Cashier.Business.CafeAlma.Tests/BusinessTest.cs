@@ -30,7 +30,7 @@ namespace Cashier.Business.CafeAlma.Tests
         }
 
         [Test]
-        public void TestTotalWithPersistenceSpying()
+        public void TestTotalWithPersistenceMocked()
         {
             //arrange            
             var sut = new Calculateur();
@@ -39,10 +39,12 @@ namespace Cashier.Business.CafeAlma.Tests
             listProd.Add(new Product("foo", 1));
             listProd.Add(new Product("bar", 1.8));            
             mockStorage.Setup(s => s.GetAllFromCatalogNamed("foo")).Returns(listProd);
+            
             //act
             sut.GiveMeAWayToPersistData(mockStorage.Object, "foo");
             sut.ProcessEntry(new CashierTyping { Number = 2, Reference = "foo" });
             sut.ProcessEntry(new CashierTyping { Number = 1, Reference = "bar" });
+            
             //assert
             Assert.That(sut.CalculateTotal(), Is.EqualTo(3.8));
 

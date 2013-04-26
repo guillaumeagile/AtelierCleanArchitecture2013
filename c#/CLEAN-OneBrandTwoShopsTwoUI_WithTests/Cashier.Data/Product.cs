@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Cashier.Model
 {
-   public  class Product
+   public  class Product 
     {
         public string Reference;
         public double Price;

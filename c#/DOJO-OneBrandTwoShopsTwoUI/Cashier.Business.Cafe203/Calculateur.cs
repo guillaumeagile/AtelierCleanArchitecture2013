@@ -8,8 +8,7 @@ using Cashier.Model;
 namespace Cashier.Business.Cafe203
 {
     public class Calculateur : Cashier.Business.CafeCommon.Calculateur
-    {
-       
+    {    
         
 
         public Calculateur(List<Product> listProd)
